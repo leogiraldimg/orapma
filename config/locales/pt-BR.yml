@@ -1,0 +1,31 @@
+pt-BR:
+  text_welcome: "Bem-vindo(a) ao gerenciador de esforço de projetos"
+  button_po: "Sou um P.O., C.T.O, etc."
+  button_collaborator: "Sou um colaborador"
+  legend_session_po: "Acesso gerencial"
+  error_ops_expression: "Ops! Encontramos "
+  success_manager_create: "Cadastro realizado com sucesso!"
+  legend_session_collaborator: "Acesso de colaborador"
+
+  activerecord:
+    attributes: 
+      manager:
+        first_name: "Nome"
+        email: "E-mail"
+        last_name: "Sobrenome"
+        password: "Senha"
+        password_confirmation: "Confirme sua senha"
+        position: "Tipo"
+
+    errors:
+      messages:
+        blank: 'não pode ser em branco'
+        invalid: 'inválido'
+        taken: 'já cadastrado'
+        confirmation: 'não é igual. Insira a mesma senha.'
+        too_long: 'muito grande. Máximo de %{count} caracteres'
+        too_short: 'muito curta. Mínimo de %{count} caracteres'
+        required: 'necessário'
+
+  manager_legend: "Cadastro gerencial"
+  manager_submit: "Cadastrar-se"

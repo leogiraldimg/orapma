@@ -1,0 +1,26 @@
+@import "colors";
+
+#header-navbar {
+    background-color: $white;
+
+    .navbar-content {
+        display: flex;
+    }
+
+    #navbar-brand-font {
+        font-size: 26px;
+        font-weight: bold;
+        margin-right: 30px;
+        color: $black;
+    }
+}
+
+@media (max-width: 740px) {
+    .navbar-content {
+        display: inline !important;
+    }
+    #header-navbar {
+        position: relative;
+        display: -webkit-box;
+    }
+}
