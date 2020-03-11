@@ -4,9 +4,9 @@ rvm:
 gemfile:
   - Gemfile
 
-# env:
-#   global:
-#     CC_TEST_REPORTER_ID=4a235ce1768d1b456f5cb90fcf4f953eba7659f0478026831574e5692c2f0baa
+env:
+  global:
+    CC_TEST_REPORTER_ID=971fdfa37b0f4cb293873ded00cd637a40a6ceb696573e0a565f3d71f38e8538
 
 before_install:
   - gem install rails
@@ -21,10 +21,10 @@ before_install:
 install:
   - bundle install
 
-# before_script:
-#   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-#   - chmod +x ./cc-test-reporter
-#   - ./cc-test-reporter before-build
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
 
 script:
   - rails db:migrate
@@ -33,5 +33,5 @@ script:
 services:
   - postgresql
 
-# after_script:
-#   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
