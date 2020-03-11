@@ -1,17 +1,17 @@
 @import "colors";
 
 #header-navbar {
-    background-color: $white;
+    background-color: $royal-purple;
 
     .navbar-content {
         display: flex;
     }
 
     #navbar-brand-font {
-        font-size: 26px;
+        font-size: 40px;
         font-weight: bold;
-        margin-right: 30px;
-        color: $black;
+        color: $white;
+        font-family: 'Maven Pro', sans-serif;
     }
 }
 
@@ -19,8 +19,14 @@
     .navbar-content {
         display: inline !important;
     }
+
     #header-navbar {
         position: relative;
         display: -webkit-box;
+
+        #navbar-brand-font {
+            font-size: 28px !important;
+        }
     }
+
 }
