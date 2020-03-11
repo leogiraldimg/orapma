@@ -1,6 +1,7 @@
 @import "bootstrap";
 @import "colors";
 @import "_header";
+@import "home";
 
 
 html {
@@ -9,6 +10,7 @@ html {
 
 body {
     font-family: 'Raleway', sans-serif;
+    background-color: $royal-purple;
 }
 
 .master-container {

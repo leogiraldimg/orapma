@@ -1,0 +1,41 @@
+.h1-title {
+    color: $white;
+    margin-top: 20px;
+}
+
+#home-form {
+    margin-top: 20px;
+    background-color: $blackcurrant;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    legend {
+        color: $white;
+    }
+
+    hr {
+        border-top: 1px solid $white;
+        width: 15%;
+    }
+
+    .form-fd {
+        margin-top: 20px;
+    }
+
+    .label-font {
+        color: $white;
+    }
+}
+
+@media (max-width: 740px) {
+    #home-form {
+        .row {
+            margin-right: 0;
+            margin-left: 0;
+        }
+
+        hr {
+            width: 40%;
+        }
+    }
+}
