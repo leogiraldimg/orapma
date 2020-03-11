@@ -1,8 +1,8 @@
 # Orapma
 
 [![Build Status](https://travis-ci.com/leogiraldimg/orapma.svg?token=Z7o7XFhJjahuczL3YxqA&branch=master)](https://travis-ci.com/leogiraldimg/orapma)
-[![Maintainability](https://api.codeclimate.com/v1/badges/ad934b91c3c08f355691/maintainability)](https://codeclimate.com/github/leogiraldimg/ja_lancei/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/ad934b91c3c08f355691/test_coverage)](https://codeclimate.com/github/leogiraldimg/ja_lancei/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/308cb01406573a2c4edd/maintainability)](https://codeclimate.com/github/leogiraldimg/orapma/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/308cb01406573a2c4edd/test_coverage)](https://codeclimate.com/github/leogiraldimg/orapma/test_coverage)
 
 ## Plataformas
 
