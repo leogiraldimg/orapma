@@ -3,32 +3,92 @@
     margin-top: 20px;
 }
 
-#home-form {
+#h1-welcome {
+    display: none;
+}
+
+#div-content {
+    display: none;
     margin-top: 20px;
     background-color: $blackcurrant;
-    padding-top: 20px;
+    padding-top: 1px;
     padding-bottom: 20px;
+    height: 280px;
 
     legend {
         color: $white;
+        margin-bottom: 0;
     }
 
     hr {
         border-top: 1px solid $white;
         width: 15%;
+        margin-top: 2px;
     }
 
     .form-fd {
         margin-top: 20px;
+
+        .row-content {
+            margin-top: 50px;
+
+            .col-content {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        .button-row {
+            margin-top: 50px;
+            
+            .btn-avancar {
+                color: $blackcurrant;
+            }
+        }
     }
 
     .label-font {
         color: $white;
     }
+
+    #fd-call {
+        display: none;
+    }
+    
+    #fd-plans {
+        display: none;
+    }
+
+    #fd-loading {
+        display: none;
+    }
+
+    #div-result {
+        display: none;
+        margin-top: 20px;
+
+        .h3-result {
+            color: $white;
+            font-weight: bold;
+        }
+
+        .p-result {
+            color: $white;
+            font-weight: bold;
+            font-size: 24px;
+        }
+    }
+
+    #div-return {
+        display: none;
+        margin-top: 40px;
+    }
 }
 
+
 @media (max-width: 740px) {
-    #home-form {
+    #div-content {
         .row {
             margin-right: 0;
             margin-left: 0;
@@ -36,6 +96,10 @@
 
         hr {
             width: 40%;
+        }
+
+        #div-return {
+            margin-top: 20px;
         }
     }
 }
