@@ -1,33 +1,95 @@
-<h1 class="h1-title">Bem-vindo ao website da Orapma. Consulte aqui o valor de sua ligação...</h1>
+<h1 class="h1-title" id="h1-welcome">Bem-vindo ao website da Orapma. Consulte aqui o valor de sua ligação...</h1>
 
-<form id="home-form">
-    <legend class="text-center">Localidade</legend>
-    <hr>
-    <fieldset class="form-fd" id="fd-localidade">
-        <div class="form-group row">
-            <div class="col-12 col-md-2 offset-md-2">
-                <label for="dddOrigem" class="label-font">DDD Origem</label>
+<div id="div-content">
+    <form onload="Home">
+        <fieldset class="form-fd" id="fd-locale">
+            <legend class="text-center">Localidade</legend>
+            <hr>
+            <div class="form-group row row-content">
+                <div class="col-12 col-md-2 offset-md-2 col-content">
+                    <label for="originDDD" class="control-label label-font">DDD Origem</label>
+                </div>
+                <div class="col-12 col-md-2">
+                    <select name="originDDD" class="form-control" id="originDDD">
+                        <option value="011">011</option>
+                        <option value="016">016</option>
+                        <option value="017">017</option>
+                        <option value="018">018</option>
+                    </select>
+                </div>
+                <div class="col-12 col-md-2 col-content">
+                    <label for="destinyDDD" class="control-label label-font">DDD Destino</label>
+                </div>
+                <div class="col-12 col-md-2">
+                    <select name="destinyDDD" class="form-control" id="destinyDDD">
+                        <option value="011">011</option>
+                        <option value="016">016</option>
+                        <option value="017">017</option>
+                        <option value="018">018</option>
+                    </select>
+                </div>
             </div>
-            <div class="col-12 col-md-2">
-                <select name="dddOrigem" class="form-control" id="dddOrigem">
-                    <option value="011">011</option>
-                    <option value="016">016</option>
-                    <option value="017">017</option>
-                    <option value="018">018</option>
-                </select>
+            <div class="form-group row button-row">
+                <div class="col-12 col-md-12 text-center">
+                    <button type="button" class="btn btn-light btn-avancar" id="avancar-to-ligacao">Avançar</button>
+                </div>
             </div>
-            <div class="col-12 col-md-2">
-                <label for="ddDestino" class="label-font">DDD Destino</label>
+        </fieldset>
+        <fieldset class="form-fd" id="fd-call">
+            <legend class="text-center">Ligação</legend>
+            <hr>
+            <div class="form-group row row-content">
+                <div class="col-12 col-md-2 offset-md-3 col-content">
+                    <label for="callTime" class="control-label label-font">Tempo da Ligação</label>
+                </div>
+                <div class="col-12 col-md-4">
+                    <input type="number" name="callTime" id="callTime" class="form-control" placeholder="Tempo da ligação" aria-label="Username">
+                </div>
             </div>
-            <div class="col-12 col-md-2">
-                <select name="ddDestino" class="form-control" id="ddDestino">
-                    <option value="011">011</option>
-                    <option value="016">016</option>
-                    <option value="017">017</option>
-                    <option value="018">018</option>
-                </select>
+            <div class="form-group row button-row">
+                <div class="col-12 col-md-12 text-center">
+                    <button type="button" class="btn btn-light btn-avancar" id="avancar-to-planos">Avançar</button>
+                </div>
             </div>
+        </fieldset>
+        <fieldset class="form-fd" id="fd-plans">
+            <legend class="text-center">Planos</legend>
+            <hr>
+            <div class="form-group row row-content">
+                <div class="col-12 col-md-3 offset-md-3 col-content">
+                    <label for="plan" class="control-label label-font">Escolha o plano desejado</label>
+                </div>
+                <div class="col-12 col-md-4">
+                    <select name="plan" class="form-control" id="plan">
+                        <option value="30">FaleMais 30</option>
+                        <option value="60">FaleMais 60</option>
+                        <option value="120">FaleMais 120</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row button-row">
+                <div class="col-12 col-md-12 text-center">
+                    <button type="button" class="btn btn-light btn-avancar" id="advance-to-result">Avançar</button>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="form-fd text-center" id="fd-loading">
+            <div id="loading" class="spinner-border text-light" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </fieldset>
+    </form>
+    <div class="row" id="div-result">
+        <div class="col-12 col-md-6 text-center">
+            <h3 class="h3-result">Com FaleMais <span id="withFaleMaisPlan"></span></h3>
+            <p class="p-result" id="result-with-plan"></p>
         </div>
-    </fieldset>
-
-</form>
+        <div class="col-12 col-md-6 text-center">
+            <h3 class="h3-result">Sem FaleMais <span id="withoutFaleMaisPlan"></span></h3>
+            <p class="p-result" id="result-without-plan"></p>
+        </div>
+    </div>
+    <div class="row text-center" id="div-return">
+        <button type="button" class="btn btn-light btn-avancar" id="reset">Voltar ao início</button>
+    </div>
+</div>
