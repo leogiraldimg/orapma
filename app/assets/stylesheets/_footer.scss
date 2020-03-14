@@ -1,0 +1,11 @@
+@import "colors";
+
+.footer {
+    background-color: $dark-orchid;
+
+    .footer-row {
+        margin-right: 0;
+        margin-left: 0;
+        color: $white;
+    }
+}

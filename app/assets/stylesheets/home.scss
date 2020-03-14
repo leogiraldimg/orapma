@@ -5,6 +5,9 @@
 
 #h1-welcome {
     display: none;
+    margin-top: 106px;
+    font-size: 48px;
+    padding: 15%;
 }
 
 #div-content {
@@ -13,17 +16,17 @@
     background-color: $blackcurrant;
     padding-top: 1px;
     padding-bottom: 20px;
-    height: 280px;
-    margin-bottom: 20px;
+    max-height: 60%;
 
     legend {
         color: $white;
         margin-bottom: 0;
+        font-size: 48px;
     }
 
     hr {
         border-top: 1px solid $white;
-        width: 15%;
+        width: 20%;
         margin-top: 2px;
     }
 
@@ -32,6 +35,7 @@
 
         .row-content {
             margin-top: 50px;
+            width: 100%;
 
             .col-content {
                 display: flex;
@@ -42,6 +46,7 @@
 
         .button-row {
             margin-top: 50px;
+            width: 100%;
             
             .btn-avancar {
                 color: $blackcurrant;
@@ -51,6 +56,7 @@
 
     .label-font {
         color: $white;
+        font-size: 22px;
     }
 
     #fd-call {
@@ -68,6 +74,7 @@
     #div-result {
         display: none;
         margin-top: 20px;
+        width: 100%;
 
         .h3-result {
             color: $white;
@@ -84,25 +91,87 @@
     #div-return {
         display: none;
         margin-top: 40px;
+        width: 100%;
+    }    
+}
+
+#plans{
+    .plan-row {
+        min-height: 150px;
+        width: 100%;
+
+        .plan-col {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $white;
+
+            .plan-span {
+                color: $deep-blush;
+                font-weight: bold;
+                font-size: 48px;
+            }
+
+            .plan-h2 {
+                font-weight: bold;
+                font-size: 48px;
+            }
+            .plan-p-text {
+                margin: 0;
+                font-size: 32px;
+            }
+        }
     }
 }
 
 
 @media (max-width: 740px) {
-    #div-content {
-        height: 360px;
+    #h1-welcome {
+        margin-top: 106px;
+        font-size: 48px;
+        padding: 5%;
+    }
 
+    #div-content {
         .row {
             margin-right: 0;
             margin-left: 0;
         }
 
         hr {
-            width: 40%;
+            width: 80%;
         }
 
         #div-return {
             margin-top: 20px;
         }
+    }
+
+    #plans{
+        .plan-row {
+            .plan-col {    
+                .plan-span {
+                    color: $deep-blush;
+                    font-weight: bold;
+                    font-size: 38px;
+                }
+    
+                .plan-h2 {
+                    font-weight: bold;
+                    font-size: 38px;
+                }
+                .plan-p-text {
+                    margin: 0;
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 768px) {
+    .d-md-block {
+        display: flex !important;
     }
 }
