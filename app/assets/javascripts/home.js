@@ -10,7 +10,6 @@ $(document).on("turbolinks:load", function() {
             Home.resetState();
             Home.loadElements();
             Home.loadEvents();
-            Home.setGeolocation();
         },
 
         loadElements: function () {

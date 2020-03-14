@@ -1,7 +1,7 @@
 @import "colors";
 
 #header-navbar {
-    background-color: $dark-orchid;
+    background-color: $white;
 
     .navbar-content {
         display: flex;
@@ -10,7 +10,7 @@
     #navbar-brand-font {
         font-size: 40px;
         font-weight: bold;
-        color: $white;
+        color: $dark-orchid;
         font-family: 'Maven Pro', sans-serif;
     }
 }
@@ -21,7 +21,6 @@
     }
 
     #header-navbar {
-        position: relative;
         display: -webkit-box;
 
         #navbar-brand-font {

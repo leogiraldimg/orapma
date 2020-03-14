@@ -10,7 +10,7 @@
 		<link rel="manifest" href="/manifest.json" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="theme-color" content="#661B99" />
+		<meta name="theme-color" content="#FFFFFF" />
 
 		<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700&display=swap" rel="stylesheet">
@@ -19,8 +19,10 @@
 	<body>
 		<%= render 'layouts/header' %>
 
-		<div class="container master-container">
+		<div class="container-fluid master-container">
 			<%= yield %>
 		</div>
+
+		<%= render 'layouts/footer' %>
 	</body>
 </html>

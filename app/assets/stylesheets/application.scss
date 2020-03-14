@@ -2,6 +2,7 @@
 @import "colors";
 @import "_header";
 @import "home";
+@import "_footer";
 
 
 html {
@@ -15,4 +16,6 @@ body {
 
 .master-container {
     background-color: $royal-purple;
+    padding-left: 0;
+    padding-right: 0;
 }

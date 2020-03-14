@@ -1,0 +1,38 @@
+@import "colors";
+
+.footer {
+    background-color: $blackcurrant;
+
+    .footer-row {
+        margin-right: 0;
+        margin-left: 0;
+        color: $white;
+
+        .footer-content-col {
+            font-size: 48px;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-img {
+            width: 150%;
+            margin-left: -30%;
+        }
+
+        .footer-img-col {
+            overflow: hidden;
+        }
+    }
+}
+
+@media (max-width: 740px) {
+    .footer {
+        .footer-row {
+            .footer-img {
+                width: 200%;
+                margin-left: -50%;
+                margin-top: -25%;
+            }
+        }
+    }
+}
