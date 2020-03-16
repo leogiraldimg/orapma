@@ -8,7 +8,13 @@ require 'cucumber/rails'
 require 'capybara'
 if ENV['RAILS_ENV'] == 'test'
   require 'simplecov'
-  SimpleCov.start 'rails'
+  SimpleCov.start 'rails' do
+    add_filter 'channels'
+    add_filter 'mailers'
+    add_filter 'app/models/application_record.rb'
+    add_filter 'app/jobs/application_job.rb'
+    add_filter 'app/helpers/application_helper.rb'
+  end
   puts "required simplecov"
 end
 
