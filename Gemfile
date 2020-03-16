@@ -63,7 +63,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'simplecov', require: false, group: :test
 gem 'travis'
 
-gem 'rake', '< 11.0'
+gem 'rake', '< 13.0'
 
 group :test do
   gem 'cucumber-rails', require: false
