@@ -38,7 +38,11 @@ $(document).on("turbolinks:load", function() {
 
                 if (callTime) {
                     if (callTime <= 0) {
-                        alert("Tempo de ligação deve ser positivo!")
+                        var type = "error";
+                        var title = "Ops!";
+                        var message = "Tempo de ligação deve ser maior que 0!";
+
+                        _this.showToast(type, title, message);
                     }
                     else {
                         _this.callTime = parseInt(callTime);
@@ -47,7 +51,11 @@ $(document).on("turbolinks:load", function() {
                     }
                 }
                 else {
-                    alert("Preencha o tempo de ligação!");
+                    var type = "error";
+                    var title = "Ops!";
+                    var message = "Preencha o tempo de ligação!";
+
+                    _this.showToast(type, title, message);
                 }
             });
 
@@ -79,6 +87,27 @@ $(document).on("turbolinks:load", function() {
 
                 _this.resetState();
             });
+        },
+
+        showToast: function(type, title, message) {
+            if (type == "error") {
+                iziToast.error({
+                    title: title,
+                    message: message
+                });
+            }
+            if (type == "warning") {
+                iziToast.warning({
+                    title: title,
+                    message: message
+                });
+            }
+            if (type == "success") {
+                iziToast.success({
+                    title: title,
+                    message: message
+                });
+            }
         },
 
         showResult: function() {
