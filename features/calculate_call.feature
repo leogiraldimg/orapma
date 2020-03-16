@@ -15,3 +15,12 @@ Scenario: User fills all fields with valid data
     When I fill the plans fieldset
     And I click the advance-to-result button
     Then I should see the results
+
+Scenario: User fills call field with invalid data
+    Given I am on the home page
+    When I fill the locale fieldset
+    And I click the avancar-to-ligacao button
+    Then I should see the call fieldset
+    When I fill the call fieldset incorrectly
+    And I click the avancar-to-planos button
+    Then I should not see the plans fieldset

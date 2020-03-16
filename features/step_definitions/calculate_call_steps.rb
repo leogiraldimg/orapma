@@ -22,7 +22,7 @@ When /^I click the (.*) button$/ do |button_name|
 end
 
 Then /^I should see the (.*) fieldset$/ do |fd_name|
-    expect(page).to have_xpath('.//fieldset[@id="fd-' + fd_name + '"]')
+    expect(page).to have_css("#fd-" + fd_name, visible: true)
 end
 
 When /^I fill the call fieldset$/ do
@@ -31,13 +31,23 @@ When /^I fill the call fieldset$/ do
     }
 end
 
-When("I fill the plans fieldset") do
+When /^I fill the plans fieldset$/ do
     steps %Q{
         When I select "30" in "plan"
     }
 end
 
-Then("I should see the results") do
-    expect(page).to have_xpath('.//div[@id="div-result"]')
+Then /^I should see the results$/ do
+    expect(page).to have_css("#div-content", visible: true)
+end
+  
+When /^I fill the call fieldset incorrectly$/ do
+    steps %Q{
+        When I fill in "callTime" with "-1"
+    }
+end
+
+Then /^I should not see the (.*) fieldset$/ do |fd_name|
+    expect(page).to have_css("#fd-" + fd_name, visible: false)
 end
   
