@@ -141,34 +141,23 @@ $(document).on("turbolinks:load", function() {
         calculateResult: function() {
             if (this.originDDD == "011") {
                 if (this.destinyDDD == "016") {
-                    var minuteCost = 1.9;
-                    return this.generateResultObj(minuteCost);
+                    return this.generateResultObj(1.9);
+                } else if (this.destinyDDD == "017") {
+                    return this.generateResultObj(1.7);
+                } else if (this.destinyDDD == "018") {
+                    return this.generateResultObj(0.9);
                 }
-                else if (this.destinyDDD == "017") {
-                    var minuteCost = 1.7;
-                    return this.generateResultObj(minuteCost);
-                }
-                else if (this.destinyDDD == "018") {
-                    var minuteCost = 0.9;
-                    return this.generateResultObj(minuteCost);
-                }
-            }
-            else if (this.originDDD == "016") {
+            } else if (this.originDDD == "016") {
                 if (this.destinyDDD == "011") {
-                    var minuteCost = 2.9;
-                    return this.generateResultObj(minuteCost);
+                    return this.generateResultObj(2.9);
                 }
-            }
-            else if (this.originDDD == "017") {
+            } else if (this.originDDD == "017") {
                 if (this.destinyDDD == "011") {
-                    var minuteCost = 2.7;
-                    return this.generateResultObj(minuteCost);
+                    return this.generateResultObj(2.7);
                 }
-            }
-            else {
+            } else {
                 if (this.destinyDDD == "011") {
-                    var minuteCost = 1.9;
-                    return this.generateResultObj(minuteCost);
+                    return this.generateResultObj(1.9);
                 }
             }
         },
