@@ -95,7 +95,9 @@
     }    
 }
 
-#plans{
+#plans {
+    display: none;
+    
     .plan-row {
         min-height: 150px;
         width: 100%;

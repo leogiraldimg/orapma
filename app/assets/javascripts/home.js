@@ -15,6 +15,8 @@ $(document).on("turbolinks:load", function() {
         loadElements: function () {
             $("#h1-welcome").fadeIn(500);
             $("#div-content").fadeIn(1000);
+            $("#plans").fadeIn(1500);
+            $(".footer").fadeIn(2000);
         },
 
         loadEvents: function () {

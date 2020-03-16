@@ -81,3 +81,4 @@ gem 'jquery-rails'
 
 gem "factory_bot_rails"
 gem "serviceworker-rails"
+gem 'izitoast'
