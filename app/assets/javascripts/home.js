@@ -20,6 +20,13 @@ $(document).on("turbolinks:load", function() {
         },
 
         loadEvents: function () {
+            this.loadAdvanceToCall();
+            this.loadAdvanceToPlans();
+            this.loadAdvanceToResult();
+            this.loadReset();
+        },
+
+        loadAdvanceToCall: function() {
             var _this = this;
 
             $("#avancar-to-ligacao").click(function() {
@@ -32,6 +39,10 @@ $(document).on("turbolinks:load", function() {
                 $("#fd-locale").fadeOut(0);
                 $("#fd-call").fadeIn(800);
             });
+        },
+
+        loadAdvanceToPlans: function() {
+            var _this = this;
 
             $("#avancar-to-planos").click(function() {
                 var callTime = $("#callTime").val();
@@ -58,6 +69,10 @@ $(document).on("turbolinks:load", function() {
                     _this.showToast(type, title, message);
                 }
             });
+        },
+
+        loadAdvanceToResult: function() {
+            var _this = this;
 
             $("#advance-to-result").click(function() {
                 var plan = $("#plan").val();
@@ -79,6 +94,10 @@ $(document).on("turbolinks:load", function() {
                     
                 }, 2000);
             });
+        },
+
+        loadReset: function() {
+            var _this = this;
             
             $("#reset").click(function() {
                 $("#div-result").fadeOut(0);
