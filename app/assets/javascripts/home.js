@@ -20,6 +20,13 @@ $(document).on("turbolinks:load", function() {
         },
 
         loadEvents: function () {
+            this.loadAdvanceToCall();
+            this.loadAdvanceToPlans();
+            this.loadAdvanceToResult();
+            this.loadReset();
+        },
+
+        loadAdvanceToCall: function() {
             var _this = this;
 
             $("#avancar-to-ligacao").click(function() {
@@ -32,6 +39,10 @@ $(document).on("turbolinks:load", function() {
                 $("#fd-locale").fadeOut(0);
                 $("#fd-call").fadeIn(800);
             });
+        },
+
+        loadAdvanceToPlans: function() {
+            var _this = this;
 
             $("#avancar-to-planos").click(function() {
                 var callTime = $("#callTime").val();
@@ -58,6 +69,10 @@ $(document).on("turbolinks:load", function() {
                     _this.showToast(type, title, message);
                 }
             });
+        },
+
+        loadAdvanceToResult: function() {
+            var _this = this;
 
             $("#advance-to-result").click(function() {
                 var plan = $("#plan").val();
@@ -79,6 +94,10 @@ $(document).on("turbolinks:load", function() {
                     
                 }, 2000);
             });
+        },
+
+        loadReset: function() {
+            var _this = this;
             
             $("#reset").click(function() {
                 $("#div-result").fadeOut(0);
@@ -120,38 +139,31 @@ $(document).on("turbolinks:load", function() {
         },
 
         calculateResult: function() {
+            var resultObj = null;
+
             if (this.originDDD == "011") {
                 if (this.destinyDDD == "016") {
-                    var minuteCost = 1.9;
-                    return this.generateResultObj(minuteCost);
+                    resultObj = this.generateResultObj(1.9);
+                } else if (this.destinyDDD == "017") {
+                    resultObj = this.generateResultObj(1.7);
+                } else if (this.destinyDDD == "018") {
+                    resultObj = this.generateResultObj(0.9);
                 }
-                else if (this.destinyDDD == "017") {
-                    var minuteCost = 1.7;
-                    return this.generateResultObj(minuteCost);
-                }
-                else if (this.destinyDDD == "018") {
-                    var minuteCost = 0.9;
-                    return this.generateResultObj(minuteCost);
-                }
-            }
-            else if (this.originDDD == "016") {
+            } else if (this.originDDD == "016") {
                 if (this.destinyDDD == "011") {
-                    var minuteCost = 2.9;
-                    return this.generateResultObj(minuteCost);
+                    resultObj = this.generateResultObj(2.9);
                 }
-            }
-            else if (this.originDDD == "017") {
+            } else if (this.originDDD == "017") {
                 if (this.destinyDDD == "011") {
-                    var minuteCost = 2.7;
-                    return this.generateResultObj(minuteCost);
+                    resultObj = this.generateResultObj(2.7);
                 }
-            }
-            else {
+            } else {
                 if (this.destinyDDD == "011") {
-                    var minuteCost = 1.9;
-                    return this.generateResultObj(minuteCost);
+                    resultObj = this.generateResultObj(1.9);
                 }
             }
+
+            return resultObj
         },
 
         generateResultObj: function(minuteCost) {
