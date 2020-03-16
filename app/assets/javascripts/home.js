@@ -139,27 +139,31 @@ $(document).on("turbolinks:load", function() {
         },
 
         calculateResult: function() {
+            var resultObj = null;
+
             if (this.originDDD == "011") {
                 if (this.destinyDDD == "016") {
-                    return this.generateResultObj(1.9);
+                    resultObj = this.generateResultObj(1.9);
                 } else if (this.destinyDDD == "017") {
-                    return this.generateResultObj(1.7);
+                    resultObj = this.generateResultObj(1.7);
                 } else if (this.destinyDDD == "018") {
-                    return this.generateResultObj(0.9);
+                    resultObj = this.generateResultObj(0.9);
                 }
             } else if (this.originDDD == "016") {
                 if (this.destinyDDD == "011") {
-                    return this.generateResultObj(2.9);
+                    resultObj = this.generateResultObj(2.9);
                 }
             } else if (this.originDDD == "017") {
                 if (this.destinyDDD == "011") {
-                    return this.generateResultObj(2.7);
+                    resultObj = this.generateResultObj(2.7);
                 }
             } else {
                 if (this.destinyDDD == "011") {
-                    return this.generateResultObj(1.9);
+                    resultObj = this.generateResultObj(1.9);
                 }
             }
+
+            return resultObj
         },
 
         generateResultObj: function(minuteCost) {
