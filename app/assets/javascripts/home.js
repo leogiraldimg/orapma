@@ -24,6 +24,7 @@ $(document).on("turbolinks:load", function() {
             this.loadAdvanceToPlans();
             this.loadAdvanceToResult();
             this.loadReset();
+            this.loadEnterKey();
         },
 
         loadAdvanceToCall: function() {
@@ -105,6 +106,15 @@ $(document).on("turbolinks:load", function() {
                 $("#fd-locale").fadeIn(800);
 
                 _this.resetState();
+            });
+        },
+
+        loadEnterKey: function() {
+            $(window).keydown(function(event){
+                if(event.keyCode == 13) {
+                    event.preventDefault();
+                    return false;
+                }
             });
         },
 
